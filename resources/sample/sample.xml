@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="resources/css/paper.css"?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0">
+	<info>
+		<title>Markup UK Sample Paper</title>
+		<author>
+			<personname>Your Name</personname>
+			<email>author@example.com</email>
+			<uri>https://author.example.com</uri>
+			<personblurb>
+				<para>I am an enthusiastic supporter of Markup UK.</para>
+			</personblurb>
+			<affiliation>
+				<jobtitle>Author</jobtitle>
+				<orgname>Your organisation</orgname>
+			</affiliation>
+		</author>
+		<keywordset>
+			<keyword>Conference</keyword>
+			<keyword>Proceedings</keyword>
+		</keywordset>
+		<abstract>
+			<para>This is a sample paper.</para>
+		</abstract>
+	</info>
+
+	<para>Leading text before the first section can be here.</para>
+	<section>
+		<title>Introduction</title>
+		<para>Markup UK papers are marked up using DocBook. <biblioref linkend="DB5SPEC" /></para>
+	</section>
+
+	<section>
+		<title>DocBook</title>
+		<para>This is a paragraph.<footnote>
+			<para>With a footnote.</para>
+			</footnote></para>
+		<para>As well as paragraphs, DocBook supports:<itemizedlist>
+			<listitem>
+				<para>Lists, including:<orderedlist>
+					<listitem>
+						<para>Ordered lists</para>
+					</listitem>
+					<listitem>
+						<para>Unordered lists</para>
+					</listitem>
+					<listitem>
+						<para>Variable lists<variablelist>
+							<varlistentry>
+								<term>Term 1</term>
+								<listitem>
+									<para>Definition 1</para>
+								</listitem>
+							</varlistentry>
+							<varlistentry>
+								<term>Term 2</term>
+								<listitem>
+									<para>Definition 2</para>
+								</listitem>
+							</varlistentry>
+							</variablelist></para>
+					</listitem>
+					</orderedlist></para>
+			</listitem>
+			<listitem>
+				<para>Program
+					listings<programlisting language="bourne">echo "Hello world!"</programlisting></para>
+				<para>Use the <markup role="attribute">language</markup> attribute to indicate which
+					syntax highlighter to use.</para>
+				<para>Wide program listings automatically extend to fill the available
+					width:<programlisting language="xml">&lt;xsl:message select="Hello world! Isn’t it really nice weather today?"/></programlisting></para>
+				<para>Program listings that are too wide to fit have their font size reduced:<programlisting language="xml">&lt;xsl:message select="Hello world! It really is nice weather that we're having today, don’t you think?"/></programlisting></para>
+				<para>A program listing can also have callouts:
+					<programlisting language="xquery">for $a in //node() <co xml:id="significant-id"/>
+  return $a/position()  <co xml:id="another-significant-id"/></programlisting>
+					<calloutlist>
+						<callout arearefs="significant-id"><para>This is interesting.</para></callout>
+						<callout arearefs="another-significant-id"><para>This is also interesting, even if not very practical.</para></callout>
+					</calloutlist>
+					</para>
+			</listitem>
+			<listitem>
+				<para>Tables<table frame="void">
+					<caption>Sample table</caption>
+					<col width="50%" />
+					<col width="50%" />
+					<thead>
+						<tr>
+							<th>Column 1</th>
+							<th>Column 2</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>r1c1</td>
+							<td>r1c2</td>
+						</tr>
+						<tr>
+							<td>r2c1</td>
+							<td>r2r2</td>
+						</tr>
+					</tbody>
+					</table></para>
+			</listitem>
+			<listitem>
+				<para>Figures</para>
+				<para>
+					<figure>
+						<title>Figure title</title>
+						<mediaobject><imageobject>
+							<imagedata scalefit="1" fileref="MarkupUK-2.svg" />
+						</imageobject></mediaobject>
+					</figure>
+					<figure>
+						<title>Another figure</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata scalefit="1" fileref="MarkupUK-2.svg"
+									contentwidth="200%" />
+							</imageobject>
+						</mediaobject>
+					</figure>
+					<figure pgwide="1">
+						<title>Page-wide figure</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata fileref="MarkupUK-large.svg"
+									scalefit="1" width="100%" />
+							</imageobject>
+						</mediaobject>
+					</figure>
+				</para>
+			</listitem>
+			</itemizedlist></para>
+	</section>
+	
+	<section>
+		<title>Conclusion</title>
+		<para>You can write your paper using DocBook!</para>
+
+	</section>
+
+	<bibliography xml:id="references">
+		<bibliomixed xml:id="DB5SPEC"> <abbrev>DB5SPEC</abbrev> <author>
+			<personname><surname>Walsh</surname><firstname>Norman</firstname></personname>
+			</author>: <title>The DocBook Schema</title>. Working Draft 5.0a1, <date>29 June
+			2005</date>, <orgname>OASIS</orgname>. <bibliomisc><link
+			xl:href="http://www.docbook.org/specs/wd-docbook-docbook-5.0a1.html"/></bibliomisc> </bibliomixed>
+		
+		<bibliomixed xml:id="bibliomixed-sample"> <abbrev><?oxy-placeholder content="Abreviation for references"?></abbrev> <author>
+			<personname><surname><?oxy-placeholder content="Surname"?></surname>
+				<firstname><?oxy-placeholder content="Firstname"?></firstname></personname>
+			</author>: <title><?oxy-placeholder content="Reference title"?></title>.
+			<date><?oxy-placeholder content="DD Month Year"?></date>,
+			<orgname><?oxy-placeholder content="Organization name"?></orgname>
+			<bibliomisc><link/></bibliomisc></bibliomixed>
+		
+	</bibliography>
+
+</article>

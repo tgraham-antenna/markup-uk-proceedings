@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Markup UK 2019 Paper Dashboard</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
+		<link rel="stylesheet" href="site.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<script src="params.js"></script>
+    </head>
+    <body>
+    	<h1 class="title"><span>2019 Paper Dashboard</span></h1>
+		<div class="content">
+			<section>
+				<h1>Preview</h1>
+				<p> Every time you submit a change to GitHub the PDF is auto-generated. </p>
+				<div class="button-container"><a class="button" href="paper.pdf">View generated PDF version</a></div>
+			</section>
+			<section>
+				<h1>Edit</h1>
+				<p>You can edit the paper DocBook source online using
+					<a href="https://www.oxygenxml.com/xml_web_author.html">Oxygen XML Web Author</a>.</p>
+				<div class="button-container"><a class="button" id="edit-link" href="">Edit DocBook source</a></div>
+			</section>
+			<section>
+				<h1>Source code</h1>
+				<p>Your paper source is in a GitHub repository.</p>
+				<div class="button-container"><a class="button" id="repo-link" href="">View on GitHub</a></div>
+			</section>
+			<section>
+				<h1>Deliverable</h1>
+				<p>You can download all the source files for your paper.</p>
+				<div class="button-container"><a class="button" href="markupuk.zip">Download deliverable</a></div>
+			</section>
+		</div>
+
+		<script>
+            document.getElementById('edit-link').href = window.EDIT_LINK;
+            document.getElementById('repo-link').href = window.REPO_LINK;
+        </script>
+	</body>
+</html>
